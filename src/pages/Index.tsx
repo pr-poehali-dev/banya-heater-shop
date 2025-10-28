@@ -128,6 +128,248 @@ const stoves: Stove[] = [
     weight: '145 кг',
     image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
     features: ['Премиум класс', 'Комбинированная', 'Максимальная эффективность']
+  },
+  {
+    id: 9,
+    name: 'ЕРМАК Сибирь 18',
+    type: 'Банная',
+    brand: 'ЕРМАК',
+    price: 44000,
+    power: '18 кВт',
+    volume: '10-18 м³',
+    material: 'Сталь 8мм',
+    weight: '82 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    sale: 8,
+    features: ['Сибирское качество', 'Надёжная', 'Проверенная временем']
+  },
+  {
+    id: 10,
+    name: 'ЕРМАК Уралочка 15',
+    type: 'Отопительная',
+    brand: 'ЕРМАК',
+    price: 36000,
+    power: '15 кВт',
+    volume: '12-20 м³',
+    material: 'Чугун',
+    weight: '95 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
+    features: ['Чугунная топка', 'Долговечность', 'Высокая теплоотдача']
+  },
+  {
+    id: 11,
+    name: 'FIREWAY Vesta 20',
+    type: 'Банная',
+    brand: 'FIREWAY',
+    price: 55000,
+    power: '20 кВт',
+    volume: '12-20 м³',
+    material: 'Сталь 10мм',
+    weight: '98 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    sale: 10,
+    features: ['Европейский дизайн', 'Инновационная', 'Энергоэффективная']
+  },
+  {
+    id: 12,
+    name: 'FIREWAY Nord 16',
+    type: 'Отопительная',
+    brand: 'FIREWAY',
+    price: 48000,
+    power: '16 кВт',
+    volume: '15-22 м³',
+    material: 'Сталь 8мм',
+    weight: '86 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
+    features: ['Скандинавский стиль', 'Чистое горение', 'Современная']
+  },
+  {
+    id: 13,
+    name: 'ТЕХНОЛИТ Магма 22',
+    type: 'Банная',
+    brand: 'ТЕХНОЛИТ',
+    price: 49000,
+    power: '22 кВт',
+    volume: '12-22 м³',
+    material: 'Сталь 9мм',
+    weight: '92 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    features: ['Усиленная камера', 'Быстрый нагрев', 'Термостойкая']
+  },
+  {
+    id: 14,
+    name: 'ТЕХНОЛИТ Вулкан 18',
+    type: 'Отопительная',
+    brand: 'ТЕХНОЛИТ',
+    price: 42000,
+    power: '18 кВт',
+    volume: '14-24 м³',
+    material: 'Сталь 8мм',
+    weight: '88 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
+    sale: 7,
+    features: ['Мощная конвекция', 'Равномерный нагрев', 'Экономичная']
+  },
+  {
+    id: 15,
+    name: 'ВАРВАРА Русский Пар 20',
+    type: 'Банная',
+    brand: 'ВАРВАРА',
+    price: 51000,
+    power: '20 кВт',
+    volume: '10-20 м³',
+    material: 'Сталь 10мм',
+    weight: '96 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    features: ['Мягкий пар', 'Традиционная баня', 'Защита от перегрева']
+  },
+  {
+    id: 16,
+    name: 'ВАРВАРА Терем 14',
+    type: 'Отопительная',
+    brand: 'ВАРВАРА',
+    price: 39000,
+    power: '14 кВт',
+    volume: '12-18 м³',
+    material: 'Сталь 7мм',
+    weight: '76 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
+    features: ['Русский стиль', 'Компактная', 'Уютное тепло']
+  },
+  {
+    id: 17,
+    name: 'PROMETALL Fire King 24',
+    type: 'Банная',
+    brand: 'PROMETALL',
+    price: 64000,
+    power: '24 кВт',
+    volume: '14-24 м³',
+    material: 'Сталь 12мм',
+    weight: '115 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    sale: 12,
+    features: ['Премиум сталь', 'Усиленная конструкция', 'Долговечность']
+  },
+  {
+    id: 18,
+    name: 'PROMETALL Home 16',
+    type: 'Отопительная',
+    brand: 'PROMETALL',
+    price: 47000,
+    power: '16 кВт',
+    volume: '14-20 м³',
+    material: 'Сталь 9мм',
+    weight: '89 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
+    features: ['Качественная сборка', 'Стабильный нагрев', 'Надёжная']
+  },
+  {
+    id: 19,
+    name: 'ТЕПЛОДАР Русь 18',
+    type: 'Банная',
+    brand: 'ТЕПЛОДАР',
+    price: 46000,
+    power: '18 кВт',
+    volume: '10-18 м³',
+    material: 'Сталь 8мм',
+    weight: '84 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    features: ['Популярная модель', 'Быстрый прогрев', 'Оптимальная цена']
+  },
+  {
+    id: 20,
+    name: 'ТЕПЛОДАР Печурка 12',
+    type: 'Отопительная',
+    brand: 'ТЕПЛОДАР',
+    price: 34000,
+    power: '12 кВт',
+    volume: '10-16 м³',
+    material: 'Сталь 6мм',
+    weight: '68 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
+    sale: 5,
+    features: ['Бюджетная', 'Компактная', 'Проверенная']
+  },
+  {
+    id: 21,
+    name: 'ASTON Premium 22',
+    type: 'Банная',
+    brand: 'ASTON',
+    price: 68000,
+    power: '22 кВт',
+    volume: '12-22 м³',
+    material: 'Сталь 11мм',
+    weight: '105 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    features: ['Премиум сегмент', 'Дизайнерская', 'Инновационная']
+  },
+  {
+    id: 22,
+    name: 'ASTON Comfort 18',
+    type: 'Отопительная',
+    brand: 'ASTON',
+    price: 54000,
+    power: '18 кВт',
+    volume: '16-24 м³',
+    material: 'Сталь 9мм',
+    weight: '92 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
+    sale: 8,
+    features: ['Комфортная', 'Эффективная', 'Стильная']
+  },
+  {
+    id: 23,
+    name: 'EVEREST Summit 26',
+    type: 'Банная',
+    brand: 'EVEREST',
+    price: 70000,
+    power: '26 кВт',
+    volume: '16-26 м³',
+    material: 'Сталь 12мм',
+    weight: '120 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    sale: 15,
+    features: ['Максимальная мощность', 'Профессиональная', 'Топ качество']
+  },
+  {
+    id: 24,
+    name: 'EVEREST Peak 20',
+    type: 'Отопительная',
+    brand: 'EVEREST',
+    price: 58000,
+    power: '20 кВт',
+    volume: '18-28 м³',
+    material: 'Сталь 10мм',
+    weight: '98 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
+    features: ['Высокая эффективность', 'Прочная', 'Долговечная']
+  },
+  {
+    id: 25,
+    name: 'ECOKAMIN Eco Plus 16',
+    type: 'Банная',
+    brand: 'ECOKAMIN',
+    price: 43000,
+    power: '16 кВт',
+    volume: '8-16 м³',
+    material: 'Сталь 8мм',
+    weight: '78 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    features: ['Экологичная', 'Низкий выброс', 'Чистое горение']
+  },
+  {
+    id: 26,
+    name: 'ECOKAMIN Green Heat 14',
+    type: 'Отопительная',
+    brand: 'ECOKAMIN',
+    price: 38000,
+    power: '14 кВт',
+    volume: '12-18 м³',
+    material: 'Сталь 7мм',
+    weight: '72 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
+    sale: 6,
+    features: ['Эко-технология', 'Энергосберегающая', 'Современная']
   }
 ];
 
@@ -228,14 +470,15 @@ export default function Index() {
             </div>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="text-sm font-semibold text-muted-foreground mr-2 flex items-center">Бренд:</div>
-              {['Все', 'Везувий'].map(brand => (
+              {['Все', 'Везувий', 'ЕРМАК', 'FIREWAY', 'ТЕХНОЛИТ', 'ВАРВАРА', 'PROMETALL', 'ТЕПЛОДАР', 'ASTON', 'EVEREST', 'ECOKAMIN'].map(brand => (
                 <Button
                   key={brand}
                   onClick={() => setFilterBrand(brand)}
                   variant={filterBrand === brand ? 'default' : 'outline'}
                   className="font-semibold"
+                  size={brand === 'Все' ? 'default' : 'sm'}
                 >
-                  <Icon name="Flame" size={16} className="mr-2" />
+                  {brand !== 'Все' && <Icon name="Flame" size={14} className="mr-1" />}
                   {brand}
                 </Button>
               ))}
