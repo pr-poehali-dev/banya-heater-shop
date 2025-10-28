@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -374,6 +375,7 @@ const stoves: Stove[] = [
 ];
 
 export default function Index() {
+  const navigate = useNavigate();
   const [selectedStoves, setSelectedStoves] = useState<number[]>([]);
   const [filterType, setFilterType] = useState<string>('Все');
   const [filterBrand, setFilterBrand] = useState<string>('Все');
@@ -612,7 +614,12 @@ export default function Index() {
                     </Badge>
                   </div>
                   <CardTitle className="text-xl flex items-start justify-between gap-2">
-                    <span>{stove.name}</span>
+                    <span 
+                      className="cursor-pointer hover:text-primary transition-colors"
+                      onClick={() => navigate(`/stove/${stove.id}`)}
+                    >
+                      {stove.name}
+                    </span>
                     <Checkbox
                       checked={selectedStoves.includes(stove.id)}
                       onCheckedChange={() => toggleStoveSelection(stove.id)}
