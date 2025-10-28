@@ -6,6 +6,9 @@ import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import CartButton from '@/components/CartButton';
+import { useCart } from '@/contexts/CartContext';
+import { toast } from 'sonner';
 
 interface Stove {
   id: number;
@@ -376,6 +379,7 @@ const stoves: Stove[] = [
 
 export default function Index() {
   const navigate = useNavigate();
+  const { addToCart } = useCart();
   const [selectedStoves, setSelectedStoves] = useState<number[]>([]);
   const [filterType, setFilterType] = useState<string>('Все');
   const [filterBrand, setFilterBrand] = useState<string>('Все');
@@ -390,6 +394,17 @@ export default function Index() {
       }
       return [...prev, id];
     });
+  };
+
+  const handleAddToCart = (stove: typeof stoves[0]) => {
+    addToCart({
+      id: stove.id,
+      name: stove.name,
+      price: stove.price,
+      image: stove.image,
+      sale: stove.sale
+    });
+    toast.success('Товар добавлен в корзину!');
   };
 
   const filteredStoves = stoves.filter(s => {
@@ -415,10 +430,13 @@ export default function Index() {
               <a href="#about" className="hover:text-primary transition-colors font-semibold">О компании</a>
               <a href="#contacts" className="hover:text-primary transition-colors font-semibold">Контакты</a>
             </nav>
-            <Button variant="outline" className="bg-white/10 hover:bg-white/20 border-white/30">
-              <Icon name="Phone" size={18} className="mr-2" />
-              8 (800) 555-35-35
-            </Button>
+            <div className="flex items-center gap-4">
+              <Button variant="outline" className="bg-white/10 hover:bg-white/20 border-white/30">
+                <Icon name="Phone" size={18} className="mr-2" />
+                8 (800) 555-35-35
+              </Button>
+              <CartButton />
+            </div>
           </div>
         </div>
       </header>
@@ -673,9 +691,15 @@ export default function Index() {
                       </div>
                     )}
                   </div>
-                  <Button className="font-semibold">
+                  <Button 
+                    className="font-semibold"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleAddToCart(stove);
+                    }}
+                  >
                     <Icon name="ShoppingCart" size={18} className="mr-2" />
-                    Купить
+                    В корзину
                   </Button>
                 </CardFooter>
               </Card>

@@ -3,6 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import { useCart } from '@/contexts/CartContext';
+import { toast } from 'sonner';
 
 interface Stove {
   id: number;
@@ -374,8 +376,23 @@ const stoves: Stove[] = [
 export default function StoveDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { addToCart } = useCart();
   
   const stove = stoves.find(s => s.id === Number(id));
+
+  const handleAddToCart = () => {
+    if (stove) {
+      const finalPrice = stove.sale ? stove.price * (1 - stove.sale / 100) : stove.price;
+      addToCart({
+        id: stove.id,
+        name: stove.name,
+        price: stove.price,
+        image: stove.image,
+        sale: stove.sale
+      });
+      toast.success('Товар добавлен в корзину!');
+    }
+  };
 
   if (!stove) {
     return (
@@ -495,13 +512,13 @@ export default function StoveDetail() {
                 </div>
 
                 <div className="flex gap-4">
-                  <Button size="lg" className="flex-1">
+                  <Button size="lg" className="flex-1" onClick={handleAddToCart}>
                     <Icon name="ShoppingCart" size={20} className="mr-2" />
-                    Купить
+                    В корзину
                   </Button>
-                  <Button size="lg" variant="outline">
-                    <Icon name="Phone" size={20} className="mr-2" />
-                    Заказать звонок
+                  <Button size="lg" variant="outline" onClick={() => navigate('/cart')}>
+                    <Icon name="ShoppingBag" size={20} className="mr-2" />
+                    Оформить
                   </Button>
                 </div>
               </div>
