@@ -134,6 +134,7 @@ const stoves: Stove[] = [
 export default function Index() {
   const [selectedStoves, setSelectedStoves] = useState<number[]>([]);
   const [filterType, setFilterType] = useState<string>('Все');
+  const [filterBrand, setFilterBrand] = useState<string>('Все');
 
   const toggleStoveSelection = (id: number) => {
     setSelectedStoves(prev => {
@@ -147,9 +148,11 @@ export default function Index() {
     });
   };
 
-  const filteredStoves = filterType === 'Все' 
-    ? stoves 
-    : stoves.filter(s => s.type === filterType);
+  const filteredStoves = stoves.filter(s => {
+    const matchesType = filterType === 'Все' || s.type === filterType;
+    const matchesBrand = filterBrand === 'Все' || s.brand === filterBrand;
+    return matchesType && matchesBrand;
+  });
 
   const selectedStovesData = stoves.filter(s => selectedStoves.includes(s.id));
 
@@ -209,17 +212,34 @@ export default function Index() {
             <p className="text-lg text-muted-foreground">Выберите идеальную печь для вашего дома или бани</p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {['Все', 'Банная', 'Отопительная'].map(type => (
-              <Button
-                key={type}
-                onClick={() => setFilterType(type)}
-                variant={filterType === type ? 'default' : 'outline'}
-                className="font-semibold"
-              >
-                {type}
-              </Button>
-            ))}
+          <div className="mb-8 space-y-4">
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="text-sm font-semibold text-muted-foreground mr-2 flex items-center">Тип печи:</div>
+              {['Все', 'Банная', 'Отопительная'].map(type => (
+                <Button
+                  key={type}
+                  onClick={() => setFilterType(type)}
+                  variant={filterType === type ? 'default' : 'outline'}
+                  className="font-semibold"
+                >
+                  {type}
+                </Button>
+              ))}
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="text-sm font-semibold text-muted-foreground mr-2 flex items-center">Бренд:</div>
+              {['Все', 'Везувий'].map(brand => (
+                <Button
+                  key={brand}
+                  onClick={() => setFilterBrand(brand)}
+                  variant={filterBrand === brand ? 'default' : 'outline'}
+                  className="font-semibold"
+                >
+                  <Icon name="Flame" size={16} className="mr-2" />
+                  {brand}
+                </Button>
+              ))}
+            </div>
           </div>
 
           {selectedStoves.length > 0 && (
