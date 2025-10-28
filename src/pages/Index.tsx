@@ -18,82 +18,116 @@ interface Stove {
   image: string;
   sale?: number;
   features: string[];
+  brand: string;
 }
 
 const stoves: Stove[] = [
   {
     id: 1,
-    name: 'Теплодар Русь',
+    name: 'Везувий Легенда Стандарт 16',
     type: 'Банная',
-    price: 45000,
-    power: '18 кВт',
-    volume: '8-18 м³',
+    brand: 'Везувий',
+    price: 52000,
+    power: '16 кВт',
+    volume: '8-16 м³',
     material: 'Сталь 8мм',
     weight: '85 кг',
     image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
     sale: 15,
-    features: ['Быстрый нагрев', 'Экономичный расход', 'Длительное горение']
-  },
-  {
-    id: 2,
-    name: 'Ермак Сибирь',
-    type: 'Отопительная',
-    price: 38000,
-    power: '12 кВт',
-    volume: '10-20 м³',
-    material: 'Чугун',
-    weight: '120 кг',
-    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
-    features: ['Панорамное стекло', 'Высокий КПД', 'Долговечность']
-  },
-  {
-    id: 3,
-    name: 'Везувий Легенда',
-    type: 'Банная',
-    price: 52000,
-    power: '22 кВт',
-    volume: '12-24 м³',
-    material: 'Сталь 10мм',
-    weight: '95 кг',
-    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
     features: ['Увеличенная каменка', 'Парогенератор', 'Жаростойкое покрытие']
   },
   {
-    id: 4,
-    name: 'Термофор Гейзер',
-    type: 'Отопительная',
-    price: 42000,
-    power: '15 кВт',
-    volume: '15-25 м³',
-    material: 'Сталь 6мм',
-    weight: '78 кг',
+    id: 2,
+    name: 'Везувий Скиф Стандарт 22',
+    type: 'Банная',
+    brand: 'Везувий',
+    price: 48000,
+    power: '22 кВт',
+    volume: '12-22 м³',
+    material: 'Сталь 10мм',
+    weight: '95 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    features: ['Мощная каменка', 'Быстрый прогрев', 'Длительное горение']
+  },
+  {
+    id: 3,
+    name: 'Везувий Русичъ Премиум 18',
+    type: 'Банная',
+    brand: 'Везувий',
+    price: 62000,
+    power: '18 кВт',
+    volume: '10-18 м³',
+    material: 'Сталь 12мм',
+    weight: '108 кг',
     image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
     sale: 10,
-    features: ['Конвекционный нагрев', 'Регулировка тяги', 'Компактный размер']
+    features: ['Премиум качество', 'Усиленная конструкция', 'Panoramic стекло']
+  },
+  {
+    id: 4,
+    name: 'Везувий Оптимум 14',
+    type: 'Банная',
+    brand: 'Везувий',
+    price: 38000,
+    power: '14 кВт',
+    volume: '8-14 м³',
+    material: 'Сталь 6мм',
+    weight: '72 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    features: ['Компактная', 'Экономичная', 'Надёжная']
   },
   {
     id: 5,
-    name: 'Варвара Русский Пар',
+    name: 'Везувий Ураган 24',
     type: 'Банная',
-    price: 48000,
-    power: '20 кВт',
-    volume: '10-22 м³',
-    material: 'Сталь 9мм',
-    weight: '92 кг',
-    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
-    features: ['Мягкий пар', 'Большая загрузка дров', 'Защита от перегрева']
+    brand: 'Везувий',
+    price: 58000,
+    power: '24 кВт',
+    volume: '14-24 м³',
+    material: 'Сталь 10мм',
+    weight: '112 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
+    sale: 12,
+    features: ['Максимальная мощность', 'Большой объём', 'Профессиональная']
   },
   {
     id: 6,
-    name: 'Harvia M3',
+    name: 'Везувий Вертикаль 20',
     type: 'Отопительная',
-    price: 67000,
-    power: '25 кВт',
+    brand: 'Везувий',
+    price: 45000,
+    power: '20 кВт',
+    volume: '15-25 м³',
+    material: 'Сталь 8мм',
+    weight: '88 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
+    features: ['Вертикальная загрузка', 'Высокий КПД', 'Экономия дров']
+  },
+  {
+    id: 7,
+    name: 'Везувий Эко 12',
+    type: 'Отопительная',
+    brand: 'Везувий',
+    price: 35000,
+    power: '12 кВт',
+    volume: '10-15 м³',
+    material: 'Сталь 6мм',
+    weight: '68 кг',
+    image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/089b8914-8cf0-4a69-b4e5-20febcf52f4e.jpg',
+    features: ['Экологичная', 'Компактная', 'Современный дизайн']
+  },
+  {
+    id: 8,
+    name: 'Везувий Премиум Термо 28',
+    type: 'Отопительная',
+    brand: 'Везувий',
+    price: 72000,
+    power: '28 кВт',
     volume: '20-35 м³',
-    material: 'Чугун премиум',
+    material: 'Чугун + Сталь',
     weight: '145 кг',
     image: 'https://cdn.poehali.dev/projects/f9ea886c-efa7-412a-82fd-cb4d271dfc47/files/d2da4a26-1d03-4aec-8d0f-db51930d96c5.jpg',
-    features: ['Финское качество', 'Автоматическая регулировка', 'Энергоэффективность']
+    features: ['Премиум класс', 'Комбинированная', 'Максимальная эффективность']
   }
 ];
 
@@ -309,6 +343,11 @@ export default function Index() {
                   </div>
                 </div>
                 <CardHeader>
+                  <div className="mb-2">
+                    <Badge variant="outline" className="bg-primary/5 text-primary border-primary/30 font-bold">
+                      {stove.brand}
+                    </Badge>
+                  </div>
                   <CardTitle className="text-xl flex items-start justify-between gap-2">
                     <span>{stove.name}</span>
                     <Checkbox
